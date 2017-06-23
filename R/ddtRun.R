@@ -1,0 +1,1 @@
+run <- function(ddtsDir, preload, compare, expectedFileName = "actual.json" ){  dirs <- list.dirs(path = ddtsDir, recursive = F, full.names = T)  for(d in dirs ){    print(d)    runSingle(d, preload, compare, expectedFileName)  }}
