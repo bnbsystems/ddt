@@ -20,7 +20,7 @@ options(tibble.print_min = 5, tibble.print_max = 5)
 # Installation
 
 ```{r, eval = FALSE}
-# The easiest way to get ddt is to install the whole:
+# The easiest way to get ddt is to install the package from CRAN:
 install.packages("ddt")
 # Or the the development version from GitHub:
 devtools::install_github("bnbsystems/ddt")
