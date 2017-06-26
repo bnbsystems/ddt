@@ -1,4 +1,17 @@
-preload <- function(){  myDf <- read.csv("example_input.csv")  return(lm(y~x, data=myDf))  }
-compare <- function(expected, actual){  if(all(abs(expected$coefficients - actual$coefficients) < 0.001) ){    print("Same")  } else {    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))  }}
+reload <- function(){
+  myDf <- read.csv("example_input.csv")
+  return(lm(y~x, data=myDf))  
+}
 
-run(ddtsDir, preload, compare) 
+　
+compare <- function(expected, actual){
+  if(all(abs(expected$coefficients - actual$coefficients) < 0.001) ){
+    print("Same")
+  } else {
+    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
+  }
+}
+
+　
+　
+ddtRun(ddtsDir, preload, compare) 
