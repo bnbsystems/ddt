@@ -39,11 +39,11 @@ devtools::install_github("bnbsystems/ddt")
 
 
 # Code of conduct
-Please note that this project is released with a [Contributor Code of Conduct](../blob/master/.github/CONTRIBUTING.md). By participating in this project you agree to abide by its terms
+Please note that this project is released with a [Contributor Code of Conduct](../master/.github/CONTRIBUTING.md). By participating in this project you agree to abide by its terms
 
 
 
 ## Getting help
-Except for [github issue website](https://github.com/bnbsystems/ddt/issues) you can check [ddt mailing list](https://groups.google.com/forum/?fromgroups#!forum/bnbsystemsddt), it is a friendly place to ask any questions about ddt package, testing R code and Data-driven testing. You must be a member to post messages.
+Except for [github issue website](https://github.com/bnbsystems/ddt/issues) where there are technical issues, you can also check [ddt mailing list](https://groups.google.com/forum/?fromgroups#!forum/bnbsystemsddt), it is a friendly place to ask any questions about ddt package, testing R code and Data-driven testing. You must be a member to post messages.
 
 
