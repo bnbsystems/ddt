@@ -1,37 +1,24 @@
----
-output:
-  github_document: 
-    html_preview: false
----
 
-```{r, echo=F}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
-options(tibble.print_min = 5, tibble.print_max = 5)
-```
+ddt
+===
 
+Overview
+========
 
-# ddt
+Installation
+============
 
-# Overview
-
-
-
-# Installation
-
-```{r, eval = FALSE}
+``` r
 # The easiest way to get ddt is to install the package from CRAN:
 install.packages("ddt")
 # Or the the development version from GitHub:
 devtools::install_github("bnbsystems/ddt")
 ```
 
+Usage
+=====
 
-# Usage
+Code of conduct
+===============
 
-
-# Code of conduct
 Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms
