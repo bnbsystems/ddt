@@ -1,7 +1,6 @@
 #library(jsonlite)
 
-　
-　
+
 getReadSaveObj.JSON <- function() {
     list(save = function(obj, filePath) {
         serObj <- serializeJSON(obj, pretty = T)
