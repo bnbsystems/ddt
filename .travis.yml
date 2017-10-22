@@ -3,3 +3,16 @@
 language: R
 sudo: false
 cache: packages
+github_packages:
+  - assertthat
+  - devtools
+  
+repos:
+CRAN: https://cloud.r-project.org
+ropensci: http://packages.ropensci.org
+install:
+- R -e 'devtools::install_deps(dep = T)'
+
+script:
+- R CMD build .
+- R CMD check *tar.gz
