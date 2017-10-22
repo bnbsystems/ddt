@@ -30,7 +30,7 @@ We love testing our code, models and data :heart_eyes:
 ```{r, eval = FALSE}
 # The easiest way to get ddt is to install the package from CRAN:
 install.packages("ddt")
-# Or the the development version from GitHub:
+# or you can install the development version from GitHub:
 devtools::install_github("bnbsystems/ddt")
 ```
 

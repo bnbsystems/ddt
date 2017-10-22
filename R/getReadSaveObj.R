@@ -1,4 +1,3 @@
-#library(jsonlite)
 
 
 getReadSaveObj.JSON <- function() {
@@ -16,7 +15,6 @@ getReadSaveObj.JSON <- function() {
 
 getReadSaveObj.RDS <- function() {
     list(save = function(obj, filePath) {
-        print(filePath)
         print("saving to ", filePath)
         save(obj, file = filePath)
     }, read = function(filePath) {
@@ -25,7 +23,6 @@ getReadSaveObj.RDS <- function() {
     }) %>% return
 }
 
-　
 getReadSaveObj.CSV <- function() {
     list(save = function(obj, filePath) {
         write.table(x = obj, file = filePath, append = FALSE, na = "NA", row.names = FALSE, col.names = TRUE)
@@ -34,5 +31,4 @@ getReadSaveObj.CSV <- function() {
     }) %>% return
 }
 
-　
 getReadSaveObj.Default <- getReadSaveObj.JSON

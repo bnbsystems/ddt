@@ -1,6 +1,7 @@
 
 library(dplyr)
 library(nycflights13)
+library(magrittr)
 
 ddtCreateDirs(ddtsDir)
 

@@ -1,17 +1,17 @@
 Package: ddt
 Type: Package
 Title: Data Driven Testing
-Version: 0.1
+Version: 0.0.1
 Date: 2017-05-01
 Author: person("Arkadiusz", "Beer", role=c("aut", "cre", "cph") )
-Maintainer: BnB Systems ltd
+Maintainer: BnB Systems ltd <bnbsystemsltd@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 URL: https://github.com/bnbsystems/ddt
 BugReports: https://github.com/bnbsystems/ddt/issues
-Imports: jsonlite
-Suggests: testthat, magrittr, RUnit, ensurer, knitr,     rmarkdown
-License: GPL-3
+Depends:  jsonlite, magrittr
+Suggests: testthat, RUnit, ensurer, knitr,     rmarkdown
+License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1

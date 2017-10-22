@@ -1,1 +1,5 @@
+importFrom(jsonlite,"serializeJSON", "unserializeJSON")
+importFrom(magrittr,"%>%")
+importFrom("utils", "read.table", "write.table")
+
 exportPattern("^[[:alpha:]]+")
