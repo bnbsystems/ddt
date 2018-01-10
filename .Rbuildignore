@@ -7,4 +7,20 @@
 ^\.travis\.yml$
 ^\.httr-oauth$
 ^NEWS\.md$
+^README\.md$
 
+#build files
+^appveyor\.yml
+\.travis\.yml
+#R files
+.Rhistory
+#git files
+\.github/
+\.gitattributes
+\.gitignore
+#mac files
+\.DS_Store
+#Rcheck
+\.\.Rcheck/ 
+^\.git$
+^\.\.Rcheck$

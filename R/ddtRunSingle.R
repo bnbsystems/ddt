@@ -1,4 +1,23 @@
-
+#' Run singple test under given location
+#'
+#' @param ddtDir (characters) path where tests inputs and outputs should be stored
+#' @param preload (function) loading function
+#' @param compare (function) compared of actual and expected objects
+#' @param expectedFileName (character) generated file
+#' @param readSaveObj (list of functions ) please look at \code{\link{getReadSaveObj.default}}
+#' @family ddtRun
+#' @seealso  \code{\link{ddtRun}}
+#' @export
+#' @examples
+#' ddtDir <- './test/ddt/testCase1'  #location where single DDT is
+#' preload <- function(){ return(lm(y~x, data=read.csv("example_input.csv")))  }
+#' compare <- function(expected, actual){
+#'  if(all(abs(expected$coefficients - actual$coefficients) < 0.001) ){
+#'    print("Same")
+#'  } else {
+#'    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
+#'  }}
+#' ddtRunSingle(ddtDir, preload, compare) # run single test
 ddtRunSingle <- function(ddtDir, preload, compare, expectedFileName, readSaveObj = NULL) {
     if (is.null(readSaveObj)) {
         readSaveObj <- getReadSaveObj.Default()

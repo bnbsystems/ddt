@@ -1,5 +1,4 @@
-
-
+#' @describeIn  \code{\link{getReadSaveObj.Default}} JSON serializer
 getReadSaveObj.JSON <- function() {
     list(save = function(obj, filePath) {
         serObj <- jsonlite::serializeJSON(obj, pretty = T)
@@ -13,6 +12,8 @@ getReadSaveObj.JSON <- function() {
     }) %>% return
 }
 
+
+#' @describeIn  \code{\link{getReadSaveObj.Default}} RDS serializer
 getReadSaveObj.RDS <- function() {
     list(save = function(obj, filePath) {
         print("saving to ", filePath)
@@ -23,6 +24,7 @@ getReadSaveObj.RDS <- function() {
     }) %>% return
 }
 
+#' @describeIn \code{\link{getReadSaveObj.Default}} reading/writing from/to simple CSV file
 getReadSaveObj.CSV <- function() {
     list(save = function(obj, filePath) {
         utils::write.table(x = obj, file = filePath, append = FALSE, na = "NA", row.names = FALSE, col.names = TRUE)
@@ -31,4 +33,12 @@ getReadSaveObj.CSV <- function() {
     }) %>% return
 }
 
+
+#' Run singple test under given location
+#'
+#' @family getReadSaveObj
+#' @seealso  \code{\link{ddtRun}}
+#' @export
+#' @examples
+#' ddtRunSingle(".", function(){}, function(){}, getReadSaveObj.CSV ) # run single test
 getReadSaveObj.Default <- getReadSaveObj.JSON

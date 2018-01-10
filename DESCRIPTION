@@ -9,8 +9,8 @@ Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 URL: https://github.com/bnbsystems/ddt
 BugReports: https://github.com/bnbsystems/ddt/issues
-Depends:  jsonlite, magrittr
-Suggests: testthat, RUnit, ensurer, knitr,     rmarkdown
+Imports:  jsonlite, magrittr
+Suggests: testthat, RUnit, ensurer, knitr, rmarkdown
 License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
