@@ -16,14 +16,16 @@ ddtRun(ddtsDir, preload, compare, expectedFileName = "actual.csv",
 
 \item{expectedFileName}{(character) generated file}
 
-\item{readSaveObj}{(list of functions ) please look at \code{\link{getReadSaveObj.default}}}
+\item{readSaveObj}{(list of functions )}
 }
 \description{
 Run tests under given location
 }
 \examples{
 ddtsDir <- './test/ddt'  #location where DDT are
-reload <- function(){ return(lm(y~x, data=read.csv("example_input.csv")))  }
+x <- 1:20
+y <- x*2 + rnorm(20)
+preload <- function(){ return(lm(y~x)) }
 compare <- function(expected, actual){
  if(all(abs(expected$coefficients - actual$coefficients) < 0.001) ){
    print("Same")
@@ -33,7 +35,7 @@ compare <- function(expected, actual){
 ddtRun(ddtsDir, preload, compare) # run all test
 }
 \seealso{
-\code{\link{ddtRunSingle}}
+\code{\link{ddtRunSingle}} \code{\link{getReadSaveObj.Default}}
 
 Other ddtRun: \code{\link{ddtRunSingle}}
 }

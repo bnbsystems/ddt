@@ -4,13 +4,15 @@
 #' @param preload (function) loading function
 #' @param compare (function) compared of actual and expected objects
 #' @param expectedFileName (character) generated file
-#' @param readSaveObj (list of functions ) please look at \code{\link{getReadSaveObj.default}}
+#' @param readSaveObj (list of functions ) 
 #' @family ddtRun
-#' @seealso  \code{\link{ddtRunSingle}}
+#' @seealso  \code{\link{ddtRunSingle}} \code{\link{getReadSaveObj.Default}}
 #' @export
 #' @examples
-#' ddtsDir <- './test/ddt'  #location where DDT are
-#' reload <- function(){ return(lm(y~x, data=read.csv("example_input.csv")))  }
+#' ddtDir <- './tests/example_in_doc/testCase_1'  #location where single DDT is
+#' x <- 1:20
+#' y <- x*2 + rnorm(20)
+#' preload <- function(){ return(lm(y~x)) }
 #' compare <- function(expected, actual){
 #'  if(all(abs(expected$coefficients - actual$coefficients) < 0.001) ){
 #'    print("Same")
