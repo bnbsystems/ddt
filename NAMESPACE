@@ -3,4 +3,4 @@
 export(ddtCreateDirs)
 export(ddtRun)
 export(ddtRunSingle)
-export(getReadSaveObj.JSON)
+export(getReadSaveObj)

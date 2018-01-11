@@ -1,5 +1,5 @@
 
-#' @describeIn  \link{getReadSaveObj.JSON} RDS serializer
+#' @describeIn  getReadSaveObj RDS serializer
 getReadSaveObj.RDS <- function() {
     return(list(save = function(obj, filePath) {
         print("saving to ", filePath)

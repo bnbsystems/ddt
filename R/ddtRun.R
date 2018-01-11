@@ -6,10 +6,10 @@
 #' @param expectedFileName (character) generated file
 #' @param readSaveObj (list of functions ) 
 #' @family ddtRun
-#' @seealso  \code{\link{ddtRunSingle}} \code{\link{getReadSaveObj.Default}}
+#' @seealso  \code{\link{ddtRunSingle}} \code{\link{getReadSaveObj}}
 #' @export
 #' @examples
-#' ddtDir <- './tests/example_in_doc/testCase_1'  #location where single DDT is
+#' ddtsDir <- './tests/example_in_doc/testCase_1'  #location where single DDT is
 #' x <- 1:20
 #' y <- x*2 + rnorm(20)
 #' preload <- function(){ return(lm(y~x)) }
@@ -19,7 +19,7 @@
 #'  } else {
 #'    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
 #'  }}
-#' ddtRun(ddtsDir, preload, compare) # run all test
+#' # ddtRun(ddtsDir, preload, compare) # run all test
 ddtRun <- function(ddtsDir, preload, compare, expectedFileName = "actual.csv", readSaveObj = NULL) {
   dirs <- list.dirs(path = ddtsDir, recursive = F, full.names = T)
 

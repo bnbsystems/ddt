@@ -1,11 +1,6 @@
 
-#' Reads/Writes objects in JSON format
-#'
-#' @family getReadSaveObj
-#' @seealso  \code{\link{ddtRun}}
-#' @export
-#' @examples
-#' ddtRunSingle(".", function(){}, function(){}, getReadSaveObj.CSV ) # run single test
+#' @describeIn  getReadSaveObj JSON serializer 
+
 getReadSaveObj.JSON <- function() {
     return(list(save = function(obj, filePath) {
         serObj <- jsonlite::serializeJSON(obj, pretty = T)

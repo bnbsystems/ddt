@@ -2,9 +2,10 @@
 % Please edit documentation in R/ddtRunSingle.R
 \name{ddtRunSingle}
 \alias{ddtRunSingle}
-\title{Run singple test under given location}
+\title{Run single test under given location}
 \usage{
-ddtRunSingle(ddtDir, preload, compare, expectedFileName, readSaveObj = NULL)
+ddtRunSingle(ddtDir, preload, compare, expectedFileName = "data.txt",
+  readSaveObj = NULL)
 }
 \arguments{
 \item{ddtDir}{(characters) path where tests inputs and outputs should be stored}
@@ -18,10 +19,10 @@ ddtRunSingle(ddtDir, preload, compare, expectedFileName, readSaveObj = NULL)
 \item{readSaveObj}{(list of functions )}
 }
 \description{
-Run singple test under given location
+Run single test under given location
 }
 \examples{
-ddtDir <- './test/ddt/testCase1'  #location where single DDT is
+ddtDir <- './tests/example_in_doc/testCase_1'  #location where single DDT is
 x <- 1:20
 y <- x*2 + rnorm(20)
 preload <- function(){ return(lm(y~x)) }
@@ -31,10 +32,10 @@ compare <- function(expected, actual){
  } else {
    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
  }}
-ddtRunSingle(ddtDir, preload, compare) # run single test
+# ddtRunSingle(ddtDir, preload, compare) # will create required files
 }
 \seealso{
-\code{\link{ddtRun}} \code{\link{getReadSaveObj.Default}}
+\code{\link{ddtRun}} \code{\link{getReadSaveObj}}
 
 Other ddtRun: \code{\link{ddtRun}}
 }

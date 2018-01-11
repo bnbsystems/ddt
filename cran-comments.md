@@ -3,30 +3,6 @@
 
 ## R CMD check results
 
-* checking for file ‘ddt/DESCRIPTION’ ... OK
-* preparing ‘ddt’:
-* checking DESCRIPTION meta-information ... OK
-* installing the package to build vignettes
-* creating vignettes ... OK
-* checking for LF line-endings in source and make files
-* checking for empty or unneeded directories
-Removed empty directory ‘ddt/.github’
-Removed empty directory ‘ddt/Example/1_simple/tests/testCase_1/expected’
-Removed empty directory ‘ddt/Example/1_simple/tests/testCase_1/in’
-Removed empty directory ‘ddt/Example/1_simple/tests/testCase_1’
-Removed empty directory ‘ddt/Example/1_simple/tests/testCase_2’
-Removed empty directory ‘ddt/Example/1_simple/tests/testCase_3’
-Removed empty directory ‘ddt/Example/1_simple/tests’
-Removed empty directory ‘ddt/Example/2_RUnit/tests/testCase_1’
-Removed empty directory ‘ddt/Example/2_RUnit/tests/testCase_2’
-Removed empty directory ‘ddt/Example/2_RUnit/tests/testCase_3’
-Removed empty directory ‘ddt/Example/2_RUnit/tests’
-Removed empty directory ‘ddt/Example/5_data.table’
-Removed empty directory ‘ddt/packrat/lib-ext’
-Removed empty directory ‘ddt/tests/example_in_doc/testCase_1’
-Removed empty directory ‘ddt/tests/example_in_doc’
-* building ‘ddt_0.0.1.tar.gz’
-
 * using log directory ‘/Users/arekbee/Code/ddt/ddt.Rcheck’
 * using R version 3.3.0 (2016-05-03)
 * using platform: x86_64-apple-darwin13.4.0 (64-bit)
@@ -105,15 +81,7 @@ Namespace in Imports field not imported from: ‘magrittr’
 * checking R code for possible problems ... OK
 * checking Rd files ... OK
 * checking Rd metadata ... OK
-* checking Rd cross-references ... WARNING
-Missing link or links in documentation object 'ddtRun.Rd':
-  ‘getReadSaveObj.Default’
-
-Missing link or links in documentation object 'ddtRunSingle.Rd':
-  ‘getReadSaveObj.Default’
-
-See section 'Cross-references' in the 'Writing R Extensions' manual.
-
+* checking Rd cross-references ... OK
 * checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
 * checking Rd \usage sections ... OK
@@ -125,27 +93,17 @@ See section 'Cross-references' in the 'Writing R Extensions' manual.
 Running examples in ‘ddt-Ex.R’ failed
 The error most likely occurred in:
 
-> ### Name: ddtRunSingle
-> ### Title: Run singple test under given location
-> ### Aliases: ddtRunSingle
+> ### Name: getReadSaveObj.CSV
+> ### Title: Reads/Writes objects in JSON format
+> ### Aliases: getReadSaveObj.CSV getReadSaveObj.JSON getReadSaveObj
+> ###   getReadSaveObj.RDS
 > 
 > ### ** Examples
 > 
-> ddtDir <- './test/ddt/testCase1'  #location where single DDT is
-> x <- 1:20
-> y <- x*2 + rnorm(20)
-> preload <- function(){ return(lm(y~x)) }
-> compare <- function(expected, actual){
-+  if(all(abs(expected$coefficients - actual$coefficients) < 0.001) ){
-+    print("Same")
-+  } else {
-+    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
-+  }}
-> ddtRunSingle(ddtDir, preload, compare) # run single test
-Warning in dir.create(ddtDirIn) :
-  cannot create dir './test/ddt/testCase1/in', reason 'No such file or directory'
-Error in setwd(ddtDirIn) : cannot change working directory
-Calls: ddtRunSingle -> setwd
+> ddtRunSingle(".", function(){}, function(){}, getReadSaveObj ) # run single test
+Error in file.path(ddtDir, "actual", expectedFileName) : 
+  cannot coerce type 'closure' to vector of type 'character'
+Calls: ddtRunSingle -> <Anonymous> -> cat -> file.path
 Execution halted
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ...
@@ -157,25 +115,10 @@ Execution halted
    ‘ddt-vignette.Rmd’ using ‘UTF-8’ ... OK
  NONE
 * checking re-building of vignette outputs ... OK
-* checking PDF version of manual ... WARNING
-LaTeX errors when creating PDF version.
-This typically indicates Rd problems.
-LaTeX errors found:
-! LaTeX Error: File `inconsolata.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-! Emergency stop.
-<read *> 
-         
-l.276 ^^M
-         
-!  ==> Fatal error occurred, no output PDF file produced!
-* checking PDF version of manual without hyperrefs or index ... ERROR
+* checking PDF version of manual ... OK
 * DONE
 
-Status: 2 ERRORs, 2 WARNINGs, 3 NOTEs
+Status: 1 ERROR, 3 NOTEs
 See
   ‘/Users/arekbee/Code/ddt/ddt.Rcheck/00check.log’
 for details.

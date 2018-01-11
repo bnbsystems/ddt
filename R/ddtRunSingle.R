@@ -1,4 +1,4 @@
-#' Run singple test under given location
+#' Run single test under given location
 #'
 #' @param ddtDir (characters) path where tests inputs and outputs should be stored
 #' @param preload (function) loading function
@@ -6,7 +6,7 @@
 #' @param expectedFileName (character) generated file
 #' @param readSaveObj (list of functions ) 
 #' @family ddtRun
-#' @seealso  \code{\link{ddtRun}} \code{\link{getReadSaveObj.Default}}
+#' @seealso  \code{\link{ddtRun}} \code{\link{getReadSaveObj}}
 #' @export
 #' @examples
 #' ddtDir <- './tests/example_in_doc/testCase_1'  #location where single DDT is
@@ -19,11 +19,10 @@
 #'  } else {
 #'    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
 #'  }}
-#' ddtRunSingle(ddtDir, preload, compare) # will create required files
-#' ddtRunSingle(ddtDir, preload, compare) # will return 'Same data'
+#' # ddtRunSingle(ddtDir, preload, compare) # will create required files
 ddtRunSingle <- function(ddtDir, preload, compare, expectedFileName='data.txt', readSaveObj = NULL) {
   if (is.null(readSaveObj)) {
-    readSaveObj <- getReadSaveObj.Default()
+    readSaveObj <- getReadSaveObj()
   }
   
   if (!dir.exists(ddtDir)) {
@@ -33,12 +32,11 @@ ddtRunSingle <- function(ddtDir, preload, compare, expectedFileName='data.txt', 
   oldwd <- getwd()
   
   ddtDirIn <- file.path(ddtDir, "in")
-  if (dir.exists(ddtDirIn)) {
-      setwd(ddtDirIn)
-  }else{
+
+  if (!dir.exists(ddtDirIn)) {
       dir.create(ddtDirIn)
-      setwd(ddtDirIn)
   }
+
   
   e1 <- new.env( parent = baseenv())
   assign( "res", preload(), envir = e1)

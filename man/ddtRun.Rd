@@ -22,7 +22,7 @@ ddtRun(ddtsDir, preload, compare, expectedFileName = "actual.csv",
 Run tests under given location
 }
 \examples{
-ddtsDir <- './test/ddt'  #location where DDT are
+ddtsDir <- './tests/example_in_doc/testCase_1'  #location where single DDT is
 x <- 1:20
 y <- x*2 + rnorm(20)
 preload <- function(){ return(lm(y~x)) }
@@ -32,10 +32,10 @@ compare <- function(expected, actual){
  } else {
    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
  }}
-ddtRun(ddtsDir, preload, compare) # run all test
+# ddtRun(ddtsDir, preload, compare) # run all test
 }
 \seealso{
-\code{\link{ddtRunSingle}} \code{\link{getReadSaveObj.Default}}
+\code{\link{ddtRunSingle}} \code{\link{getReadSaveObj}}
 
 Other ddtRun: \code{\link{ddtRunSingle}}
 }
