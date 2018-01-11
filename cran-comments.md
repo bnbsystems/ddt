@@ -2,6 +2,7 @@
 * local OS X install, 3.3.0 (2016-05-03)
 
 ## R CMD check results
+
 * checking for file ‘ddt/DESCRIPTION’ ... OK
 * preparing ‘ddt’:
 * checking DESCRIPTION meta-information ... OK
@@ -22,6 +23,8 @@ Removed empty directory ‘ddt/Example/2_RUnit/tests/testCase_3’
 Removed empty directory ‘ddt/Example/2_RUnit/tests’
 Removed empty directory ‘ddt/Example/5_data.table’
 Removed empty directory ‘ddt/packrat/lib-ext’
+Removed empty directory ‘ddt/tests/example_in_doc/testCase_1’
+Removed empty directory ‘ddt/tests/example_in_doc’
 * building ‘ddt_0.0.1.tar.gz’
 
 * using log directory ‘/Users/arekbee/Code/ddt/ddt.Rcheck’
@@ -139,9 +142,10 @@ The error most likely occurred in:
 +    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
 +  }}
 > ddtRunSingle(ddtDir, preload, compare) # run single test
-Error in file.path(ddtDir, "actual", expectedFileName) : 
-  argument "expectedFileName" is missing, with no default
-Calls: ddtRunSingle -> <Anonymous> -> cat -> file.path
+Warning in dir.create(ddtDirIn) :
+  cannot create dir './test/ddt/testCase1/in', reason 'No such file or directory'
+Error in setwd(ddtDirIn) : cannot change working directory
+Calls: ddtRunSingle -> setwd
 Execution halted
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ...
@@ -175,4 +179,3 @@ Status: 2 ERRORs, 2 WARNINGs, 3 NOTEs
 See
   ‘/Users/arekbee/Code/ddt/ddt.Rcheck/00check.log’
 for details.
-

@@ -26,7 +26,10 @@ ddtRunSingle <- function(ddtDir, preload, compare, expectedFileName='data.txt', 
     readSaveObj <- getReadSaveObj.Default()
   }
   
-  
+  if (!dir.exists(ddtDir)) {
+      dir.create(ddtDir)
+  }
+
   oldwd <- getwd()
   
   ddtDirIn <- file.path(ddtDir, "in")
