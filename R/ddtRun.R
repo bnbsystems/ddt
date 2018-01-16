@@ -17,7 +17,7 @@
 #'  if(all(abs(expected$coefficients - actual$coefficients) < 0.001) ){
 #'    print("Same")
 #'  } else {
-#'    stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
+#'    stop("wrong coefficents. Expected ", expected$coefficients , " but is ",  actual$coefficients)
 #'  }}
 #' # ddtRun(ddtsDir, preload, compare) # run all test
 ddtRun <- function(ddtsDir, preload, compare, expectedFileName = "actual.csv", readSaveObj = NULL) {

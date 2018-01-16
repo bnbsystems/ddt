@@ -30,7 +30,7 @@ compare <- function(expected, actual){
  if(all(abs(expected$coefficients - actual$coefficients) < 0.001) ){
    print("Same")
  } else {
-   stop("wrong coefficents. Expected ", print(expected$coefficients) , " but is ",  print(actual$coefficients))
+   stop("wrong coefficents. Expected ", expected$coefficients, " but is ",  actual$coefficients)
  }}
 # ddtRunSingle(ddtDir, preload, compare) # will create required files
 }

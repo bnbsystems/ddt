@@ -24,3 +24,13 @@
 \.\.Rcheck/ 
 ^\.git$
 ^\.\.Rcheck$
+
+
+Example/
+README\.Rmd
+cran-comments\.md
+ddt\.Rproj
+ddt\.rxproj
+ddt\.sln
+packrat/
+pub/

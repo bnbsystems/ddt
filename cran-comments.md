@@ -89,22 +89,7 @@ Namespace in Imports field not imported from: ‘magrittr’
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... ERROR
-Running examples in ‘ddt-Ex.R’ failed
-The error most likely occurred in:
-
-> ### Name: getReadSaveObj.CSV
-> ### Title: Reads/Writes objects in JSON format
-> ### Aliases: getReadSaveObj.CSV getReadSaveObj.JSON getReadSaveObj
-> ###   getReadSaveObj.RDS
-> 
-> ### ** Examples
-> 
-> ddtRunSingle(".", function(){}, function(){}, getReadSaveObj ) # run single test
-Error in file.path(ddtDir, "actual", expectedFileName) : 
-  cannot coerce type 'closure' to vector of type 'character'
-Calls: ddtRunSingle -> <Anonymous> -> cat -> file.path
-Execution halted
+* checking examples ... OK
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ...
   Running ‘testthat.R’
@@ -118,7 +103,7 @@ Execution halted
 * checking PDF version of manual ... OK
 * DONE
 
-Status: 1 ERROR, 3 NOTEs
+Status: 3 NOTEs
 See
   ‘/Users/arekbee/Code/ddt/ddt.Rcheck/00check.log’
 for details.
