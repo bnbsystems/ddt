@@ -5,8 +5,7 @@ Version: 0.0.1
 Date: 2017-05-01
 Author: person("Arkadiusz", "Beer", role=c("aut", "cre", "cph") )
 Maintainer: BnB Systems ltd <bnbsystemsltd@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: It is simple framework to do automated, data-oriented, file-based integration tests. It will let you write test without knowing R language and this package will help you cooperate with teammates to build software/models/packages/functions that matters. 
 URL: https://github.com/bnbsystems/ddt
 BugReports: https://github.com/bnbsystems/ddt/issues
 Imports:  jsonlite, magrittr
