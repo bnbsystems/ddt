@@ -37,3 +37,4 @@ ddt\.rxproj
 ddt\.sln
 packrat/
 pub/
+tests/
