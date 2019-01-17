@@ -1,17 +1,27 @@
 Package: ddt
 Type: Package
 Title: Data Driven Testing
-Version: 0.0.1
-Date: 2017-05-01
+Version: 0.0.2
+Date: 2019-01-17
 Author: person("Arkadiusz", "Beer", role=c("aut", "cre", "cph") )
 Maintainer: BnB Systems ltd <bnbsystemsltd@gmail.com>
-Description: It is simple framework to do automated, data-oriented, file-based integration tests. It will let you write test without knowing R language and this package will help you cooperate with teammates to build software/models/packages/functions that matters. 
+Description: It is simple framework to do automated, data-oriented, file-based
+    integration tests. It will let you write test without knowing R language and
+    this package will help you cooperate with teammates to build software/models/
+    packages/functions that matters.
 URL: https://github.com/bnbsystems/ddt
 BugReports: https://github.com/bnbsystems/ddt/issues
-Imports:  jsonlite, magrittr
-Suggests: testthat, RUnit, ensurer, knitr, rmarkdown
+Imports:
+    jsonlite,
+    magrittr
+Suggests:
+    testthat,
+    RUnit,
+    ensurer,
+    knitr,
+    rmarkdown
 License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 VignetteBuilder: knitr

@@ -21,9 +21,12 @@
 #mac files
 \.DS_Store
 #Rcheck
-\.\.Rcheck/ 
+\.\.Rcheck/
 ^\.git$
 ^\.\.Rcheck$
+
+vignettes/figure$
+vignettes/cache$
 
 
 Example/
