@@ -1,0 +1,9 @@
+plugins {
+  id "com.github.arekbee.gradle-R-plugin" version "0.12"
+}
+
+
+rPackageBuild.dependsOn(rPackageCheck)
+rPackageBuild.dependsOn(rPackageDocument)
+rPackageBuild.dependsOn(rPackageLint)
+rPackageBuild.dependsOn(rPackageTest)

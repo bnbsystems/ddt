@@ -5,4 +5,4 @@
 #' @export
 #' @examples
 #' #ddtRunSingle(".", function(){}, function(){}, getReadSaveObj ) # run single test
-getReadSaveObj <- function() {return(getReadSaveObj.JSON())}
+getReadSaveObj <- function() { return(getReadSaveObj.JSON()) }

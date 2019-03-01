@@ -24,11 +24,8 @@
 \.\.Rcheck/
 ^\.git$
 ^\.\.Rcheck$
-
 vignettes/figure$
 vignettes/cache$
-
-
 Example/
 README\.Rmd
 cran-comments\.md
@@ -38,3 +35,12 @@ ddt\.sln
 packrat/
 pub/
 tests/
+.gradle
+gradle*
+build.cmd
+build/
+packrat/lib*
+packrat/src*
+gradle.properties
+.*report.html$
+README.md
